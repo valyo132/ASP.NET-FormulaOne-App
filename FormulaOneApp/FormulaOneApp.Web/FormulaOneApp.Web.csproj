@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.23">
@@ -20,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FormulaOneApp.Data\FormulaOneApp.Data.csproj" />
     <ProjectReference Include="..\FormulaOneApp.Services.Data\FormulaOneApp.Services.Data.csproj" />
+    <ProjectReference Include="..\FormulaOneApp.Services.Mapping\FormulaOneApp.Services.Mapping.csproj" />
     <ProjectReference Include="..\FormulaOneApp.Web.ViewModels\FormulaOneApp.Web.ViewModels.csproj" />
   </ItemGroup>
 

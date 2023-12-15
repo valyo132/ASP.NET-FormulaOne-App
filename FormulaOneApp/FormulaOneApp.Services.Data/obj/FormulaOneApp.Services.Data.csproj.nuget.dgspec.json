@@ -59,14 +59,14 @@
         }
       }
     },
-    "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\FormulaOneApp.Services.Data.csproj": {
+    "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data\\FormulaOneApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\FormulaOneApp.Services.Data.csproj",
-        "projectName": "FormulaOneApp.Services.Data",
-        "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\FormulaOneApp.Services.Data.csproj",
+        "projectUniqueName": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data\\FormulaOneApp.Data.csproj",
+        "projectName": "FormulaOneApp.Data",
+        "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data\\FormulaOneApp.Data.csproj",
         "packagesPath": "C:\\Users\\valyo\\.nuget\\packages\\",
-        "outputPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\obj\\",
+        "outputPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\valyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -99,6 +99,154 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\FormulaOneApp.Services.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\FormulaOneApp.Services.Data.csproj",
+        "projectName": "FormulaOneApp.Services.Data",
+        "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\FormulaOneApp.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\valyo\\.nuget\\packages\\",
+        "outputPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Services.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\valyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data.Models\\FormulaOneApp.Data.Models.csproj": {
+                "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data.Models\\FormulaOneApp.Data.Models.csproj"
+              },
+              "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data\\FormulaOneApp.Data.csproj": {
+                "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data\\FormulaOneApp.Data.csproj"
+              },
+              "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Web.ViewModels\\FormulaOneApp.Web.ViewModels.csproj": {
+                "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Web.ViewModels\\FormulaOneApp.Web.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Web.ViewModels\\FormulaOneApp.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Web.ViewModels\\FormulaOneApp.Web.ViewModels.csproj",
+        "projectName": "FormulaOneApp.Web.ViewModels",
+        "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Web.ViewModels\\FormulaOneApp.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\valyo\\.nuget\\packages\\",
+        "outputPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\valyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data.Models\\FormulaOneApp.Data.Models.csproj": {
+                "projectPath": "G:\\ASP.NET-FormulaOne-App\\FormulaOneApp\\FormulaOneApp.Data.Models\\FormulaOneApp.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"

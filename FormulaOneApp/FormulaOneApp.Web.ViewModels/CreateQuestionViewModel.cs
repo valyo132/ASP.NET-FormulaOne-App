@@ -21,7 +21,7 @@ namespace FormulaOneApp.Web.ViewModels
 
         public Difficulty Difficulty { get; set; }
 
-        [Required]
+        [ValidateNever]
         public IEnumerable<SelectListItem> Difficulties { get; set; }
 
         [Required]

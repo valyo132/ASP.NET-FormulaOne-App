@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 using FormulaOneApp.Web.Data;
-
+using FormulaOneApp.Services.Mapping;
+using FormulaOneApp.Services.Data.Interfaces;
+using FormulaOneApp.Services.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,13 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<FormulaOneAppProfile>();
+});
+
+builder.Services.AddScoped<IQuestionService, QuestionService>();
 
 var app = builder.Build();
 

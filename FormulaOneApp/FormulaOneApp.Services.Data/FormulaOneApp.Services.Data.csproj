@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FormulaOneApp.Data.Models\FormulaOneApp.Data.Models.csproj" />
+    <ProjectReference Include="..\FormulaOneApp.Data\FormulaOneApp.Data.csproj" />
+    <ProjectReference Include="..\FormulaOneApp.Web.ViewModels\FormulaOneApp.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>
