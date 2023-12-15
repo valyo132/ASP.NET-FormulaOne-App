@@ -1,0 +1,70 @@
+﻿@using FormulaOneApp.Web.ViewModels;
+@model CreateQuestionViewModel
+
+<form asp-action="CreateQuestion" asp-controller="Question" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <label asp-for="@Model.Text">Text:</label>
+        <input asp-for="@Model.Text" type="text" />
+        <span asp-validation-for="Text" style="color:red"></span>
+    </div>
+    <div class="container">
+        <select class="form-select" aria-label="Default select example" asp-for="Category" asp-items="@Model.Categories">
+        </select>
+    </div>
+    <div class="container">
+        <select class="form-select" aria-label="Default select example" asp-for="Difficulty" asp-items="@Model.Difficulties">
+        </select>
+    </div>
+    <div class="container">
+        <label asp-for="@Model.CorrectAnswer">Correct answer:</label>
+        <input asp-for="@Model.CorrectAnswer" type="text" />
+        <span asp-validation-for="CorrectAnswer" style="color:red"></span>
+    </div>
+    <div class="container">
+        <label asp-for="@Model.WrongAnswerOne">Wrong answer 1:</label>
+        <input asp-for="@Model.WrongAnswerOne" type="text" />
+        <span asp-validation-for="WrongAnswerOne" style="color:red"></span>
+    </div>
+    <div class="container">
+        <label asp-for="@Model.WrongAnswerTwo">Wrong answer 2:</label>
+        <input asp-for="@Model.WrongAnswerTwo" type="text" />
+        <span asp-validation-for="WrongAnswerTwo" style="color:red"></span>
+    </div>
+    <div class="container">
+        <label asp-for="@Model.WrongAnswerThree">Wrong answer 3:</label>
+        <input asp-for="@Model.WrongAnswerThree" type="text" />
+        <span asp-validation-for="WrongAnswerThree" style="color:red"></span>
+    </div>
+    <div class="container">
+        <label asp-for="@Model.Explanation">Text:</label>
+        <textarea asp-for="@Model.Explanation"></textarea>
+        <span asp-validation-for="Explanation" style="color:red"></span>
+    </div>
+    <div class="col-lg-4">
+        <img class="img-thumbnail" id="preview" src="#" alt="Preview Image"
+             style="display: none; width: 200px;">
+
+        <label for="formFile" class="form-label">Choose image:</label>
+        <input type="file" name="file" class="form-control" id="formFile" onchange="placeImage(event)">
+    </div>
+
+    <button type=submit>Submit</button>
+</form>
+
+<script>
+    function placeImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('preview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

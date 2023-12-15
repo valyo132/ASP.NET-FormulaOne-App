@@ -1,0 +1,15 @@
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\bin\Debug\net6.0\FormulaOneApp.Services.Data.deps.json
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\bin\Debug\net6.0\FormulaOneApp.Services.Data.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\bin\Debug\net6.0\FormulaOneApp.Services.Data.pdb
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\bin\Debug\net6.0\FormulaOneApp.Data.Models.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\bin\Debug\net6.0\FormulaOneApp.Data.Models.pdb
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.csproj.AssemblyReference.cache
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.AssemblyInfoInputs.cache
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.AssemblyInfo.cs
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.csproj.CoreCompileInputs.cache
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.csproj.CopyComplete
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\refint\FormulaOneApp.Services.Data.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.pdb
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\ref\FormulaOneApp.Services.Data.dll
