@@ -2781,6 +2781,9 @@
       "FormulaOneApp.Data.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "6.0.23"
+        },
         "compile": {
           "bin/placeholder/FormulaOneApp.Data.Models.dll": {}
         },

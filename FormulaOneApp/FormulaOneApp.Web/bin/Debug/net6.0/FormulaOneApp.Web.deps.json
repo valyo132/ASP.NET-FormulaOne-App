@@ -2883,6 +2883,9 @@
         }
       },
       "FormulaOneApp.Data.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "6.0.23"
+        },
         "runtime": {
           "FormulaOneApp.Data.Models.dll": {}
         }
