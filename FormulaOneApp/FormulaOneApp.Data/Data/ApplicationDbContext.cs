@@ -9,8 +9,6 @@ namespace FormulaOneApp.Web.Data
     {
         public DbSet<Question> Questions { get; set; } = null!;
 
-        public DbSet<Option> Options { get; set; } = null!;
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

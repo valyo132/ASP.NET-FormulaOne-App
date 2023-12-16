@@ -1,0 +1,11 @@
+﻿@using FormulaOneApp.Web.ViewModels;
+@model QuestionViewModel
+
+<h1>@Model.Text</h1>
+<img src="data:image/png;base64,@Convert.ToBase64String(Model.Media)" alt="Question Image" />
+<div>
+    <radio>@Model.WrongAnswerTwo</radio>
+    <radio>@Model.WrongAnswerOne</radio>
+    <radio>@Model.WrongAnswerThree</radio>
+    <radio>@Model.CorrectAnswer</radio>
+</div>

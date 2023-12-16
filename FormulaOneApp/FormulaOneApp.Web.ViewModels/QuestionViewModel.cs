@@ -1,23 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
+﻿using FormulaOneApp.Data.Models;
 using FormulaOneApp.Data.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
-namespace FormulaOneApp.Data.Models
+namespace FormulaOneApp.Web.ViewModels
 {
-    public class Question
+    public class QuestionViewModel
     {
-        [Key]
         public Guid Id { get; set; }
 
-        [Required]
-        [MinLength(1)]
         public string Text { get; set; } = null!;
 
-        [Required]
         public Category Category { get; set; }
 
-        [Required]
         public Difficulty Difficulty { get; set; }
 
         [Required]

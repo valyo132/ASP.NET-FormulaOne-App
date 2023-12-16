@@ -9,6 +9,8 @@ namespace FormulaOneApp.Services.Mapping
         public FormulaOneAppProfile()
         {
             CreateMap<CreateQuestionViewModel, Question>();
+
+            CreateMap<Question, QuestionViewModel>();
         }
     }
 }
