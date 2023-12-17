@@ -1,6 +1,7 @@
-﻿using FormulaOneApp.Services.Data.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+
+using FormulaOneApp.Services.Data.Interfaces;
 using FormulaOneApp.Web.ViewModels;
-using Microsoft.AspNetCore.Mvc;
 
 namespace FormulaOneApp.Web.Controllers
 {
@@ -14,9 +15,17 @@ namespace FormulaOneApp.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> PickQuestion()
+        public async Task<IActionResult> AllCategories()
         {
-            QuestionViewModel pickedQuestion = await _questionService.PickQuestionAsync();
+            var allQuestions = await _questionService.AllAsync();
+
+            return View(allQuestions);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> PickQuestion(string category)
+        {
+            QuestionViewModel pickedQuestion = await _questionService.PickQuestionAsync(category);
 
             return View(pickedQuestion);
         }

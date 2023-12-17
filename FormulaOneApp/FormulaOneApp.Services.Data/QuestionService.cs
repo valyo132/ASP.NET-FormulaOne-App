@@ -9,6 +9,7 @@ using FormulaOneApp.Web.ViewModels;
 
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using FormulaOneApp.Data.Models.Enums;
 
 namespace FormulaOneApp.Services.Data
 {
@@ -54,15 +55,18 @@ namespace FormulaOneApp.Services.Data
             await _context.SaveChangesAsync();
         }
 
-        public async Task<QuestionViewModel> PickQuestionAsync()
+        public async Task<QuestionViewModel> PickQuestionAsync(string category)
         {
-            int size = _context.Questions.Count();
+            int size = _context.Questions
+                .Where(x => x.Category == Enum.Parse<Category>(category))
+                .Count();
 
             Random random = new Random();
-            int randomNumber = random.Next(1, size);
+            int randomNumber = random.Next(1, size + 1);
 
             Question pickedQuestion = await _context.Questions
-                .Skip(randomNumber)
+                .Where(x => x.Category == Enum.Parse<Category>(category))
+                .Skip(randomNumber - 1)
                 .FirstOrDefaultAsync();
 
             return _mapper.Map<QuestionViewModel>(pickedQuestion);

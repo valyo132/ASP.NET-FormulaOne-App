@@ -13,3 +13,4 @@ G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web.ViewModels\obj\Debug\n
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web.ViewModels\obj\Debug\net6.0\refint\FormulaOneApp.Web.ViewModels.dll
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web.ViewModels\obj\Debug\net6.0\FormulaOneApp.Web.ViewModels.pdb
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web.ViewModels\obj\Debug\net6.0\ref\FormulaOneApp.Web.ViewModels.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web.ViewModels\obj\Debug\net6.0\FormulaOneApp.Web.ViewModels.sourcelink.json

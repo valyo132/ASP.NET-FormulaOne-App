@@ -17,3 +17,4 @@ G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\ne
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\refint\FormulaOneApp.Services.Data.dll
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.pdb
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\ref\FormulaOneApp.Services.Data.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Data\obj\Debug\net6.0\FormulaOneApp.Services.Data.sourcelink.json

@@ -272,3 +272,4 @@ G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web\obj\Debug\net6.0\refin
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web\obj\Debug\net6.0\FormulaOneApp.Web.pdb
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web\obj\Debug\net6.0\FormulaOneApp.Web.genruntimeconfig.cache
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web\obj\Debug\net6.0\ref\FormulaOneApp.Web.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Web\obj\Debug\net6.0\FormulaOneApp.Web.sourcelink.json

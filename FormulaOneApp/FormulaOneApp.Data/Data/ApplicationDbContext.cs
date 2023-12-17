@@ -8,7 +8,6 @@ namespace FormulaOneApp.Web.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Question> Questions { get; set; } = null!;
-
         public DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

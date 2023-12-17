@@ -10,3 +10,4 @@ G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Data.Models\obj\Debug\net6
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Data.Models\obj\Debug\net6.0\refint\FormulaOneApp.Data.Models.dll
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Data.Models\obj\Debug\net6.0\FormulaOneApp.Data.Models.pdb
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Data.Models\obj\Debug\net6.0\ref\FormulaOneApp.Data.Models.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Data.Models\obj\Debug\net6.0\FormulaOneApp.Data.Models.sourcelink.json

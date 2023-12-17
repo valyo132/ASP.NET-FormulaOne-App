@@ -42,7 +42,7 @@ namespace FormulaOneApp.Web.Areas.Admin.Controllers
                 throw;
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home", new {Area = ""});
         }
     }
 }

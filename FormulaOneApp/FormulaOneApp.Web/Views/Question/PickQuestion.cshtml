@@ -2,10 +2,14 @@
 @model QuestionViewModel
 
 <h1>@Model.Text</h1>
-<img src="data:image/png;base64,@Convert.ToBase64String(Model.Media)" alt="Question Image" />
+@if (Model.Media.Length > 0)
+{
+    <img src="data:image/png;base64,@Convert.ToBase64String(Model.Media)" alt="Question Image" />
+}
+
 <div>
-    <radio>@Model.WrongAnswerTwo</radio>
-    <radio>@Model.WrongAnswerOne</radio>
-    <radio>@Model.WrongAnswerThree</radio>
-    <radio>@Model.CorrectAnswer</radio>
+    <input type="radio" value="@Model.WrongAnswerTwo" />
+    <input type="radio" value="@Model.WrongAnswerOne" />
+    <input type="radio" value="@Model.WrongAnswerThree" />
+    <input type="radio" value="@Model.CorrectAnswer" />
 </div>

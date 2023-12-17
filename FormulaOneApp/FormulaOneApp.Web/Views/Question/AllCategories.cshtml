@@ -1,0 +1,9 @@
+﻿@using FormulaOneApp.Web.ViewModels;
+@model AllQuestionsViewModel
+
+<form asp-action="PickQuestion" asp-controller="Question" method="get">
+    @foreach (var category in Model.Categories)
+    {
+        <button type="submit" name="category" value="@category.Text">@category.Text</button>
+    }
+</form>

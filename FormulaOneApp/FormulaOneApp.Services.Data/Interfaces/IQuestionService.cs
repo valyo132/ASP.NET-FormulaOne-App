@@ -9,6 +9,6 @@ namespace FormulaOneApp.Services.Data.Interfaces
 
         Task<AllQuestionsViewModel> AllAsync();
 
-        Task<QuestionViewModel> PickQuestionAsync();
+        Task<QuestionViewModel> PickQuestionAsync(string item);
     }
 }
