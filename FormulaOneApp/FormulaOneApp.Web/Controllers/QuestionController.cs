@@ -23,6 +23,14 @@ namespace FormulaOneApp.Web.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> DailyQuestion()
+        {
+            QuestionViewModel dailyQuestion = await _questionService.PickDailyQuestionAsync();
+
+            return View(dailyQuestion);
+        }
+
+        [HttpGet]
         public async Task<IActionResult> PickQuestion(string category)
         {
             QuestionViewModel pickedQuestion = await _questionService.PickQuestionAsync(category);

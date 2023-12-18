@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaOneApp.Services.Mapping")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e31a6515676ec65b2fe69d13900e96848b27be7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+080b4d27d599d03e7b60ab7f67e46c9e01a71ca9")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaOneApp.Services.Mapping")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaOneApp.Services.Mapping")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,9 +6,8 @@ namespace FormulaOneApp.Services.Data.Interfaces
     public interface IQuestionService
     {
         Task CraeteQuestionAsync(IFormFile? file, CreateQuestionViewModel model);
-
         Task<AllQuestionsViewModel> AllAsync();
-
         Task<QuestionViewModel> PickQuestionAsync(string item);
+        Task<QuestionViewModel> PickDailyQuestionAsync();
     }
 }

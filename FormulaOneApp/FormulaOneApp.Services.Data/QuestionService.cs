@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 using FormulaOneApp.Services.Data.Helpers;
 using FormulaOneApp.Data.Models;
+using FormulaOneApp.Data.Models.Enums;
 using FormulaOneApp.Services.Data.Interfaces;
 using FormulaOneApp.Web.Data;
 using FormulaOneApp.Web.ViewModels;
 
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using FormulaOneApp.Data.Models.Enums;
 
 namespace FormulaOneApp.Services.Data
 {
@@ -55,17 +55,52 @@ namespace FormulaOneApp.Services.Data
             await _context.SaveChangesAsync();
         }
 
+        public async Task<QuestionViewModel> PickDailyQuestionAsync()
+        {
+            DateTime dateToday = DateTime.UtcNow;
+
+            bool isAvalable = _context.Questions
+                .Any(x => x.UploadDate.Value.Date == dateToday.Date);
+
+            if (isAvalable)
+            {
+                var question = await _context.Questions
+                    .FirstOrDefaultAsync(x => x.UploadDate.Value.Date == dateToday.Date);
+
+                return _mapper.Map<QuestionViewModel>(question);
+            }
+            else
+            {
+                int size = _context.Questions
+                .Where(x => x.IsDeleted == false)
+                .Count();
+
+                Random random = new Random();
+                int randomNumber = random.Next(1, size + 1);
+
+                Question pickedQuestion = await _context.Questions
+                    .Where(x => x.IsDeleted == false)
+                    .Skip(randomNumber - 1)
+                    .FirstOrDefaultAsync();
+
+                pickedQuestion.UploadDate = dateToday;
+                await _context.SaveChangesAsync();
+
+                return _mapper.Map<QuestionViewModel>(pickedQuestion);
+            }
+        }
+
         public async Task<QuestionViewModel> PickQuestionAsync(string category)
         {
             int size = _context.Questions
-                .Where(x => x.Category == Enum.Parse<Category>(category))
+                .Where(x => x.Category == Enum.Parse<Category>(category) && x.IsDeleted == false)
                 .Count();
 
             Random random = new Random();
             int randomNumber = random.Next(1, size + 1);
 
             Question pickedQuestion = await _context.Questions
-                .Where(x => x.Category == Enum.Parse<Category>(category))
+                .Where(x => x.Category == Enum.Parse<Category>(category) && x.IsDeleted == false)
                 .Skip(randomNumber - 1)
                 .FirstOrDefaultAsync();
 

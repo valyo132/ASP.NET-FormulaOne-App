@@ -35,6 +35,8 @@ namespace FormulaOneApp.Data.Models
         [MinLength(1)]
         public string WrongAnswerThree { get; set; } = null!;
 
+        public DateTime? UploadDate { get; set; } = null;
+
         public string? Explanation { get; set; }
 
         public byte[]? Media { get; set; }
