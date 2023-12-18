@@ -1,6 +1,8 @@
-﻿using AutoMapper;
-using FormulaOneApp.Data.Models;
+﻿using FormulaOneApp.Data.Models;
+using FormulaOneApp.Services.Data.Helpers;
 using FormulaOneApp.Web.ViewModels;
+
+using AutoMapper;
 
 namespace FormulaOneApp.Services.Mapping
 {
@@ -10,7 +12,9 @@ namespace FormulaOneApp.Services.Mapping
         {
             CreateMap<CreateQuestionViewModel, Question>();
 
-            CreateMap<Question, QuestionViewModel>();
+            // Maps AllAnswers like taking all possible options and uses QuestionHelper to shuffle the answers.
+            CreateMap<Question, QuestionViewModel>()
+                .ForMember(x => x.AllAnswers, y => y.MapFrom(q => QuestionHelper.Shuffle(new List<string>() { q.CorrectAnswer, q.WrongAnswerOne, q.WrongAnswerTwo, q.WrongAnswerThree })));
         }
     }
 }

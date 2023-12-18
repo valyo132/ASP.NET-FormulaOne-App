@@ -4628,6 +4628,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "FormulaOneApp.Data.Models": "1.0.0",
+          "FormulaOneApp.Services.Data": "1.0.0",
           "FormulaOneApp.Web.ViewModels": "1.0.0"
         },
         "compile": {

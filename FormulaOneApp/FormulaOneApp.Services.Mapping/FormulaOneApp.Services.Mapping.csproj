@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FormulaOneApp.Data.Models\FormulaOneApp.Data.Models.csproj" />
+    <ProjectReference Include="..\FormulaOneApp.Services.Data\FormulaOneApp.Services.Data.csproj" />
     <ProjectReference Include="..\FormulaOneApp.Web.ViewModels\FormulaOneApp.Web.ViewModels.csproj" />
   </ItemGroup>
 

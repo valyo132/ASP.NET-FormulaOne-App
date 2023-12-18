@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaOneApp.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+080b4d27d599d03e7b60ab7f67e46c9e01a71ca9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02db9cefa71a05b8683506b1d92d2527408a8d39")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaOneApp.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaOneApp.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

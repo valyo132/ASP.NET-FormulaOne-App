@@ -16,3 +16,7 @@ G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\obj\Debug
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\obj\Debug\net6.0\FormulaOneApp.Services.Mapping.pdb
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\obj\Debug\net6.0\ref\FormulaOneApp.Services.Mapping.dll
 G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\obj\Debug\net6.0\FormulaOneApp.Services.Mapping.sourcelink.json
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\bin\Debug\net6.0\FormulaOneApp.Data.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\bin\Debug\net6.0\FormulaOneApp.Services.Data.dll
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\bin\Debug\net6.0\FormulaOneApp.Services.Data.pdb
+G:\ASP.NET-FormulaOne-App\FormulaOneApp\FormulaOneApp.Services.Mapping\bin\Debug\net6.0\FormulaOneApp.Data.pdb
