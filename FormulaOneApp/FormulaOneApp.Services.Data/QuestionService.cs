@@ -10,18 +10,21 @@ using FormulaOneApp.Web.ViewModels;
 
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using FormulaOneApp.Web.Data.Migrations;
 
 namespace FormulaOneApp.Services.Data
 {
     public class QuestionService : IQuestionService
     {
         private readonly ApplicationDbContext _context;
+        private readonly IUserQuestionService _userQuestionService;
         private readonly IMapper _mapper;
 
-        public QuestionService(ApplicationDbContext context, IMapper mapper)
+        public QuestionService(ApplicationDbContext context, IMapper mapper, IUserQuestionService userQuestionService)
         {
             _context = context;
             _mapper = mapper;
+            _userQuestionService = userQuestionService;
         }
 
         public async Task<AllQuestionsViewModel> AllAsync()
@@ -88,6 +91,31 @@ namespace FormulaOneApp.Services.Data
 
                 return _mapper.Map<QuestionViewModel>(pickedQuestion);
             }
+        }
+
+        public async Task<bool> IsAnswerd(string questionId, string userId)
+        {
+            Question questionObj = await _context.Questions.FirstAsync(x => x.Id.ToString() == questionId);
+            ApplicationUser user = await _context.ApplicationUsers
+                .Include(u => u.UserQuestions)
+                .FirstAsync(x => x.Id == userId);
+
+            if (user.UserQuestions.FirstOrDefault(x => x.QuestionId == questionObj.Id) == null)
+                return false;
+            else
+                return true;
+        }
+
+        public async Task<bool> IsCorrect(string answer, string userId, string questionId)
+        {
+            Question questionObj = await _context.Questions.FirstAsync(x => x.Id.ToString() == questionId);
+
+            await _userQuestionService.Create(questionObj.Id.ToString(), userId);
+
+            if (questionObj.CorrectAnswer == answer)
+                return true;
+            else
+                return false;
         }
 
         public async Task<QuestionViewModel> PickQuestionAsync(string category)

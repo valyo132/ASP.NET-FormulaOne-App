@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaOneApp.Data.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+080b4d27d599d03e7b60ab7f67e46c9e01a71ca9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00ab899f35af0b1e61b6003ac772bacbe73b0489")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaOneApp.Data.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaOneApp.Data.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

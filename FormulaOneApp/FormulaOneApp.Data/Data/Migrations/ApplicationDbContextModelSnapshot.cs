@@ -71,6 +71,21 @@ namespace FormulaOneApp.Web.Data.Migrations
                     b.ToTable("Questions");
                 });
 
+            modelBuilder.Entity("FormulaOneApp.Data.Models.UserQuestion", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "QuestionId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("UsersQuestions");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -294,6 +309,25 @@ namespace FormulaOneApp.Web.Data.Migrations
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
+            modelBuilder.Entity("FormulaOneApp.Data.Models.UserQuestion", b =>
+                {
+                    b.HasOne("FormulaOneApp.Data.Models.Question", "Question")
+                        .WithMany("UserQuestions")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FormulaOneApp.Data.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("UserQuestions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Question");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -343,6 +377,16 @@ namespace FormulaOneApp.Web.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FormulaOneApp.Data.Models.Question", b =>
+                {
+                    b.Navigation("UserQuestions");
+                });
+
+            modelBuilder.Entity("FormulaOneApp.Data.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("UserQuestions");
                 });
 #pragma warning restore 612, 618
         }

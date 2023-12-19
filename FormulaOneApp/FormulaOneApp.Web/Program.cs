@@ -26,6 +26,7 @@ builder.Services.AddAutoMapper(cfg =>
 });
 
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IUserQuestionService, UserQuestionService>();
 
 var app = builder.Build();
 

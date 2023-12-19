@@ -6,5 +6,6 @@ namespace FormulaOneApp.Data.Models
     {
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
+        public ICollection<UserQuestion> UserQuestions { get; set; } = new List<UserQuestion>();
     }
 }

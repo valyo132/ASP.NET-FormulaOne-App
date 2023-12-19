@@ -9,5 +9,7 @@ namespace FormulaOneApp.Services.Data.Interfaces
         Task<AllQuestionsViewModel> AllAsync();
         Task<QuestionViewModel> PickQuestionAsync(string item);
         Task<QuestionViewModel> PickDailyQuestionAsync();
+        Task<bool> IsCorrect(string answer, string userId, string questionId);
+        Task<bool> IsAnswerd(string questionId, string userId);
     }
 }

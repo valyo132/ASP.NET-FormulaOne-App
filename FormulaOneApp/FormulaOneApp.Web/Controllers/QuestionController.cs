@@ -3,6 +3,8 @@
 using FormulaOneApp.Services.Data.Interfaces;
 using FormulaOneApp.Web.ViewModels;
 using FormulaOneApp.Services.Data.Helpers;
+using Microsoft.AspNetCore.Authorization;
+using FormulaOneApp.Data.Models;
 
 namespace FormulaOneApp.Web.Controllers
 {
@@ -23,12 +25,34 @@ namespace FormulaOneApp.Web.Controllers
             return View(allQuestions);
         }
 
+        [Authorize]
         [HttpGet]
-        public async Task<IActionResult> DailyQuestion()
+        public async Task<IActionResult> DailyQuestion(string? answer)
         {
             QuestionViewModel dailyQuestion = await _questionService.PickDailyQuestionAsync();
 
-            return View(dailyQuestion);
+            string userId = GetUserId();
+            if (!await _questionService.IsAnswerd(dailyQuestion.Id, userId))
+            {
+                try
+                {
+                    if (answer == null)
+                    {
+                        return View(dailyQuestion);
+                    }
+                    else
+                    {
+                        bool isCorrect = await _questionService.IsCorrect(answer, userId, dailyQuestion.Id);
+                        return View("AnswerdQuestion");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
+            return View("AnswerdQuestion");
         }
 
         [HttpGet]

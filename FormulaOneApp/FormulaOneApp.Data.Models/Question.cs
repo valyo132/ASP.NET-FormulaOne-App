@@ -42,5 +42,7 @@ namespace FormulaOneApp.Data.Models
         public byte[]? Media { get; set; }
 
         public bool IsDeleted { get; set; } = false;
+
+        public ICollection<UserQuestion> UserQuestions { get; set; } = new List<UserQuestion>();
     }
 }

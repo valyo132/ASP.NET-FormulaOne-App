@@ -9,6 +9,7 @@ namespace FormulaOneApp.Web.Data
     {
         public DbSet<Question> Questions { get; set; } = null!;
         public DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
+        public DbSet<UserQuestion> UsersQuestions { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -17,6 +18,9 @@ namespace FormulaOneApp.Web.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<UserQuestion>()
+                .HasKey(uq => new { uq.UserId, uq.QuestionId });
+
             base.OnModelCreating(modelBuilder);
         }
     }
