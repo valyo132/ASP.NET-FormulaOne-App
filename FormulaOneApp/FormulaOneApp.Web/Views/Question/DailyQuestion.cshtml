@@ -7,7 +7,7 @@
     <img src="data:image/png;base64,@Convert.ToBase64String(Model.Media)" alt="Question Image" />
 }
 
-<form asp-action="DailyQuestion" asp-controller="Question" method="get">
+<form asp-action="Answer" asp-controller="Question" method="get">
     <input type="hidden" value="@Model.Id" name="questionId"/>
     <button type="submit" name="answer" value="@Model.AllAnswers[0]">@Model.AllAnswers[0]</button>
     <button type="submit" name="answer" value="@Model.AllAnswers[1]">@Model.AllAnswers[1]</button>

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaOneApp.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00ab899f35af0b1e61b6003ac772bacbe73b0489")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbc9808728fe5cd5c069418ddbde828ddbfddf36")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaOneApp.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaOneApp.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

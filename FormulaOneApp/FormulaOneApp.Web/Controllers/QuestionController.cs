@@ -1,11 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 using FormulaOneApp.Services.Data.Interfaces;
 using FormulaOneApp.Web.ViewModels;
-using FormulaOneApp.Services.Data.Helpers;
-using Microsoft.AspNetCore.Authorization;
-using FormulaOneApp.Data.Models;
-
 namespace FormulaOneApp.Web.Controllers
 {
     public class QuestionController : BaseController
@@ -27,7 +24,7 @@ namespace FormulaOneApp.Web.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> DailyQuestion(string? answer)
+        public async Task<IActionResult> DailyQuestion()
         {
             QuestionViewModel dailyQuestion = await _questionService.PickDailyQuestionAsync();
 
@@ -36,21 +33,21 @@ namespace FormulaOneApp.Web.Controllers
             {
                 try
                 {
-                    if (answer == null)
-                    {
-                        return View(dailyQuestion);
-                    }
-                    else
-                    {
-                        bool isCorrect = await _questionService.IsCorrect(answer, userId, dailyQuestion.Id);
-                        return View("AnswerdQuestion");
-                    }
+                    return View(dailyQuestion);
                 }
                 catch (Exception)
                 {
                     throw;
                 }
             }
+
+            return View("AnswerdQuestion");
+        }
+
+        public async Task<IActionResult> Answer(string answer, string questionId)
+        {
+            string userId = GetUserId();
+            bool isCorrect = await _questionService.IsCorrect(answer, userId, questionId);
 
             return View("AnswerdQuestion");
         }
