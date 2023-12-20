@@ -49,7 +49,14 @@ namespace FormulaOneApp.Web.Controllers
             string userId = GetUserId();
             bool isCorrect = await _questionService.IsCorrect(answer, userId, questionId);
 
-            return View("AnswerdQuestion");
+            AnswerdDailyQuestionViewModel model = new AnswerdDailyQuestionViewModel()
+            {
+                DailyQuestion = await _questionService.PickDailyQuestionAsync(),
+                UserAnswer = answer,
+                IsCorrect = isCorrect
+            };
+
+            return View("AnswerdQuestion", model);
         }
 
         [HttpGet]

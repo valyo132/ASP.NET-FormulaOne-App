@@ -1,1 +1,36 @@
-﻿<h1>You have already answerd this question!</h1>
+﻿@using FormulaOneApp.Web.ViewModels
+@model AnswerdDailyQuestionViewModel
+
+<h1>@Model.DailyQuestion.Text</h1>
+@if (Model.DailyQuestion.Media.Length > 0)
+{
+    <img src="data:image/png;base64,@Convert.ToBase64String(Model.DailyQuestion.Media)" alt="Question Image" />
+}
+
+<div>
+    <input type="hidden" value="@Model.DailyQuestion.Id" name="questionId" />
+    <button disabled type="submit" name="answer" value="@Model.DailyQuestion.AllAnswers[0]">@Model.DailyQuestion.AllAnswers[0]</button>
+    <button disabled type="submit" name="answer" value="@Model.DailyQuestion.AllAnswers[1]">@Model.DailyQuestion.AllAnswers[1]</button>
+    <button disabled type="submit" name="answer" value="@Model.DailyQuestion.AllAnswers[2]">@Model.DailyQuestion.AllAnswers[2]</button>
+    <button disabled type="submit" name="answer" value="@Model.DailyQuestion.AllAnswers[3]">@Model.DailyQuestion.AllAnswers[3]</button>
+</div>
+
+@if (Model.IsCorrect)
+{
+    <h3>You answerd correctly</h3>
+}
+else
+{
+    <div>
+        <label>Correct answer:</label>
+        <h3>@Model.DailyQuestion.CorrectAnswer</h3>
+        <hr />
+        <label>Your answer:</label>
+        <h3>@Model.UserAnswer</h3>
+        <br />
+        @if (Model.DailyQuestion.Explanation != null)
+        {
+            <p>@Model.DailyQuestion.Explanation</p>
+        }
+    </div>
+}
